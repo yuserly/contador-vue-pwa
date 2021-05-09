@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Metadatapara PWA  -->
+    <!-- Modificar color barra de estado android-->
+    <meta name="theme-color" content="#41b883">
+    <!-- Optimizaciones de SEO -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <!-- Modificar barra de estado IOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Vue por cdn -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Contador</title>
+
+    <link rel="shortcut icon" href="./img/icon16.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/icon16.png">
+    <link rel="apple-touch-startup-image" href="./img/icon16.png">
+  <link rel="manifest" href="./manifest.json">
+</head>
+  <body>
+    <div id="app">
+      <div class="row">
+        <h1 class="text-success text-center">Contador</h1>
+        <div class="col-12 d-flex justify-content-center">
+          <h2 class="text-muted">{{user.count}}</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <div class="form-inline">
+            <button
+              class="btn btn-danger"
+              @click="monitor('restar',4)">
+              -1
+            </button>
+            <button
+              class="btn btn-info m-1"
+              @click="monitor('sumar',2)">
+              +1
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mount.js"></script>
+  </body>
+</html>
